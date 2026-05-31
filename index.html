@@ -489,7 +489,7 @@
                 <span>+91 9692090385</span>
               </a>
               <a
-                href="www.linkedin.com/in/priyanka-panda-388b0b2b2"
+                href="https://www.linkedin.com/in/priyanka-panda-388b0b2b2/"
                 target="_blank"
                 class="contact-link"
               >
@@ -560,10 +560,19 @@
     <div class="custom-cursor" id="cursor"></div>
     <div class="cursor-trail" id="cursor-trail"></div>
 
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
+    <script type="text/javascript">
+      // EmailJS inline - no CDN needed
+      (function () {
+        var s = document.createElement("script");
+        s.src =
+          "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+        s.onload = function () {
+          emailjs.init("eStI2E9JkaVAn1GhG");
+          console.log("EmailJS loaded!");
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

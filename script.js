@@ -266,8 +266,6 @@ function showXPPopup(text) {
 
 // ========== CONTACT FORM ==========
 function initContactForm() {
-  emailjs.init("eStI2E9JkaVAn1GhG");
-
   const form = document.getElementById("contact-form");
   const btn = document.getElementById("send-btn");
   const success = document.getElementById("form-success");
@@ -284,6 +282,7 @@ function initContactForm() {
     };
 
     try {
+      if (typeof emailjs === "undefined") throw new Error("EmailJS not loaded");
       await emailjs.send("service_ayp9b89", "template_dgxkbxv", templateParams);
       success.style.display = "block";
       success.textContent = "✓ MESSAGE SENT! I'll respond soon.";
@@ -302,6 +301,7 @@ function initContactForm() {
       success.style.color = "#ef4444";
       btn.textContent = "▶ SEND MESSAGE";
       btn.disabled = false;
+      console.log("EmailJS error:", err);
     }
   });
 }
