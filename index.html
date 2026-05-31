@@ -506,32 +506,12 @@
               </a>
             </div>
           </div>
-          <form
-            class="contact-form card-glass"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            id="contact-form"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="0ccbf2d7-d83c-45bb-83bb-0d3c0a6501fe"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              value="New message from Portfolio!"
-            />
-            <input
-              type="hidden"
-              name="from_name"
-              value="Portfolio Contact Form"
-            />
+          <form class="contact-form card-glass" id="contact-form">
             <div class="form-group">
               <label>NAME</label>
               <input
                 type="text"
-                name="name"
+                id="from_name"
                 placeholder="Your name..."
                 required
               />
@@ -540,7 +520,7 @@
               <label>EMAIL</label>
               <input
                 type="email"
-                name="email"
+                id="from_email"
                 placeholder="your@email.com"
                 required
               />
@@ -548,7 +528,7 @@
             <div class="form-group">
               <label>MESSAGE</label>
               <textarea
-                name="message"
+                id="message"
                 placeholder="Let's collaborate on something awesome..."
                 rows="4"
                 required
@@ -580,6 +560,7 @@
     <div class="custom-cursor" id="cursor"></div>
     <div class="cursor-trail" id="cursor-trail"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
