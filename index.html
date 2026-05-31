@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priyanka Panda — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- BOOT SCREEN -->
+    <div id="boot-screen">
+      <div class="boot-inner">
+        <div class="boot-logo">PP</div>
+        <div class="boot-text" id="boot-text"></div>
+        <div class="boot-bar-wrap">
+          <div class="boot-bar" id="boot-bar"></div>
+        </div>
+        <div class="boot-skip" id="boot-skip">[ PRESS ANY KEY TO SKIP ]</div>
+      </div>
+    </div>
+
+    <!-- HUD TOP BAR -->
+    <header class="hud-bar" id="hud-bar">
+      <div class="hud-left">
+        <span class="hud-name">PRIYANKA.EXE</span>
+        <span class="hud-status">● ONLINE</span>
+      </div>
+      <nav class="hud-nav">
+        <a href="#about" class="hud-link" data-section="about">PROFILE</a>
+        <a href="#skills" class="hud-link" data-section="skills">SKILLS</a>
+        <a href="#projects" class="hud-link" data-section="projects">QUESTS</a>
+        <a href="#experience" class="hud-link" data-section="experience"
+          >XP LOG</a
+        >
+        <a href="#contact" class="hud-link" data-section="contact">CONTACT</a>
+      </nav>
+      <div class="hud-right">
+        <span class="hud-level">LVL <span id="player-level">12</span></span>
+        <div class="hud-xp-bar-wrap">
+          <div class="hud-xp-bar" id="hud-xp-bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="scanlines"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="hero-content">
+          <div class="hero-tag">[ CSE GRADUATE · FULL STACK · AI/ML ]</div>
+          <h1 class="hero-name">
+            <span class="glitch" data-text="PRIYANKA">PRIYANKA</span><br />
+            <span class="glitch hero-lastname" data-text="PANDA">PANDA</span>
+          </h1>
+          <p class="hero-subtitle">
+            Building intelligent systems & beautiful interfaces
+          </p>
+          <div class="hero-stats">
+            <div class="stat-box">
+              <span class="stat-num">8.93</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">PROJECTS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">4+</span>
+              <span class="stat-label">CERTS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">89%</span>
+              <span class="stat-label">MODEL ACC</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">▶ VIEW QUESTS</a>
+            <a href="mailto:priyapanda959@gmail.com" class="btn-secondary"
+              >✉ SEND MESSAGE</a
+            >
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-frame">
+            <div class="avatar-char">
+              <div class="pixel-char"></div>
+            </div>
+            <div class="avatar-ring ring1"></div>
+            <div class="avatar-ring ring2"></div>
+            <div class="avatar-ring ring3"></div>
+            <div class="avatar-badge">DEVELOPER</div>
+          </div>
+        </div>
+        <div class="scroll-hint">SCROLL TO CONTINUE ↓</div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="section" id="about">
+        <div class="section-header">
+          <span class="section-tag">// PLAYER PROFILE</span>
+          <h2 class="section-title">ABOUT ME</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card card-glass">
+            <div class="about-icon">⚡</div>
+            <h3>MISSION</h3>
+            <p>
+              CSE undergraduate from GIET University with a passion for
+              full-stack development and AI-based systems. I build scalable
+              applications that solve real problems — from detecting driver
+              fatigue to tracking carbon footprints.
+            </p>
+          </div>
+          <div class="about-card card-glass">
+            <div class="about-icon">🎯</div>
+            <h3>LOCATION</h3>
+            <p>
+              Brahmapur, Odisha, India<br /><br />
+              <strong>Open to:</strong> Remote & Hybrid Opportunities<br />
+              Full Stack · ML Engineering · Product Dev
+            </p>
+          </div>
+          <div class="about-card card-glass">
+            <div class="about-icon">🏆</div>
+            <h3>ACHIEVEMENTS</h3>
+            <ul class="achieve-list">
+              <li>✓ ServiceNow Certified (App Dev + SysAdmin)</li>
+              <li>✓ NPTEL Java — 93%ile</li>
+              <li>✓ AWS Deployment Experience</li>
+              <li>✓ Real-time ML System — 89% Accuracy</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section class="section" id="skills">
+        <div class="section-header">
+          <span class="section-tag">// SKILL TREE</span>
+          <h2 class="section-title">ABILITIES</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category card-glass">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">⌨</span>
+              <span class="skill-cat-name">LANGUAGES</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item" data-level="90">
+                <span>Java</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 90%"></div>
+                </div>
+                <span class="skill-pct">90</span>
+              </div>
+              <div class="skill-item" data-level="85">
+                <span>Python</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 85%"></div>
+                </div>
+                <span class="skill-pct">85</span>
+              </div>
+              <div class="skill-item" data-level="85">
+                <span>JavaScript</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 85%"></div>
+                </div>
+                <span class="skill-pct">85</span>
+              </div>
+              <div class="skill-item" data-level="75">
+                <span>SQL</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 75%"></div>
+                </div>
+                <span class="skill-pct">75</span>
+              </div>
+              <div class="skill-item" data-level="70">
+                <span>C</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 70%"></div>
+                </div>
+                <span class="skill-pct">70</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category card-glass">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🖥</span>
+              <span class="skill-cat-name">FRONTEND</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item" data-level="90">
+                <span>React.js</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 90%"></div>
+                </div>
+                <span class="skill-pct">90</span>
+              </div>
+              <div class="skill-item" data-level="88">
+                <span>Tailwind CSS</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 88%"></div>
+                </div>
+                <span class="skill-pct">88</span>
+              </div>
+              <div class="skill-item" data-level="85">
+                <span>HTML/CSS</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 85%"></div>
+                </div>
+                <span class="skill-pct">85</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category card-glass">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">⚙</span>
+              <span class="skill-cat-name">BACKEND</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item" data-level="88">
+                <span>Node.js</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 88%"></div>
+                </div>
+                <span class="skill-pct">88</span>
+              </div>
+              <div class="skill-item" data-level="85">
+                <span>REST APIs</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 85%"></div>
+                </div>
+                <span class="skill-pct">85</span>
+              </div>
+              <div class="skill-item" data-level="80">
+                <span>FastAPI</span>
+                <div class="skill-track">
+                  <div class="skill-fill" style="--w: 80%"></div>
+                </div>
+                <span class="skill-pct">80</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category card-glass">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🤖</span>
+              <span class="skill-cat-name">AI / ML</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item" data-level="85">
+                <span>TensorFlow</span>
+                <div class="skill-track">
+                  <div class="skill-fill skill-fill--ai" style="--w: 85%"></div>
+                </div>
+                <span class="skill-pct">85</span>
+              </div>
+              <div class="skill-item" data-level="82">
+                <span>Deep Learning</span>
+                <div class="skill-track">
+                  <div class="skill-fill skill-fill--ai" style="--w: 82%"></div>
+                </div>
+                <span class="skill-pct">82</span>
+              </div>
+              <div class="skill-item" data-level="80">
+                <span>OpenCV</span>
+                <div class="skill-track">
+                  <div class="skill-fill skill-fill--ai" style="--w: 80%"></div>
+                </div>
+                <span class="skill-pct">80</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech tags -->
+        <div class="tech-cloud">
+          <span class="tech-tag">AWS</span><span class="tech-tag">Git</span
+          ><span class="tech-tag">GitHub</span> <span class="tech-tag">CNN</span
+          ><span class="tech-tag">JWT</span><span class="tech-tag">Keras</span>
+          <span class="tech-tag">ServiceNow</span
+          ><span class="tech-tag">FastAPI</span
+          ><span class="tech-tag">React.js</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="section" id="projects">
+        <div class="section-header">
+          <span class="section-tag">// COMPLETED QUESTS</span>
+          <h2 class="section-title">PROJECTS</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card card-glass" data-difficulty="HARD">
+            <div class="project-difficulty hard">⚔ HARD</div>
+            <div class="project-badge-ai">AI / ML</div>
+            <h3 class="project-title">
+              Driver Drowsiness<br />Detection System
+            </h3>
+            <p class="project-desc">
+              CNN-based deep learning model that detects driver fatigue in
+              real-time with 89% accuracy. Processed 10K+ video frames for live
+              face and eye detection with audio+visual alerts.
+            </p>
+            <div class="project-stack">
+              <span>TensorFlow</span><span>Keras</span><span>OpenCV</span
+              ><span>CNN</span><span>Python</span>
+            </div>
+            <div class="project-stats">
+              <div>
+                <span class="p-stat-num">89%</span
+                ><span class="p-stat-l">Accuracy</span>
+              </div>
+              <div>
+                <span class="p-stat-num">10K+</span
+                ><span class="p-stat-l">Frames</span>
+              </div>
+              <div>
+                <span class="p-stat-num">Real-time</span
+                ><span class="p-stat-l">Detection</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">⚙ GitHub</a>
+              <a href="#" class="btn-sm btn-sm--alt">▶ Demo</a>
+            </div>
+          </div>
+
+          <div
+            class="project-card card-glass featured-project"
+            data-difficulty="MEDIUM"
+          >
+            <div class="project-difficulty medium">◈ MEDIUM</div>
+            <div class="project-badge-ai">AI + FULLSTACK</div>
+            <div class="featured-label">⭐ FEATURED</div>
+            <h3 class="project-title">
+              AI-Based Carbon<br />Footprint Tracker
+            </h3>
+            <p class="project-desc">
+              AI-driven web app tracking CO₂ emissions from daily activities.
+              Secure FastAPI backend with JWT auth, real-time analytics
+              dashboards in React.js.
+            </p>
+            <div class="project-stack">
+              <span>React.js</span><span>FastAPI</span><span>JWT</span
+              ><span>Python</span><span>AI</span>
+            </div>
+            <div class="project-stats">
+              <div>
+                <span class="p-stat-num">Full</span
+                ><span class="p-stat-l">Stack</span>
+              </div>
+              <div>
+                <span class="p-stat-num">JWT</span
+                ><span class="p-stat-l">Auth</span>
+              </div>
+              <div>
+                <span class="p-stat-num">Live</span
+                ><span class="p-stat-l">Analytics</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn-sm">⚙ GitHub</a>
+              <a href="#" class="btn-sm btn-sm--alt">▶ Demo</a>
+            </div>
+          </div>
+
+          <!-- Placeholder cards to encourage more projects -->
+          <div class="project-card card-glass project-locked">
+            <div class="locked-overlay">
+              <span class="lock-icon">🔒</span>
+              <span class="lock-text">NEXT QUEST<br />IN PROGRESS...</span>
+              <span class="lock-sub">Add your next project here</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section class="section" id="experience">
+        <div class="section-header">
+          <span class="section-tag">// XP LOG</span>
+          <h2 class="section-title">EXPERIENCE</h2>
+        </div>
+        <div class="xp-timeline">
+          <div class="xp-item">
+            <div class="xp-dot"></div>
+            <div class="xp-card card-glass">
+              <div class="xp-top">
+                <div>
+                  <h3 class="xp-role">Full Stack Development Intern</h3>
+                  <span class="xp-company">Datapro Computer Pvt. Ltd.</span>
+                </div>
+                <span class="xp-date">May – Jun 2025</span>
+              </div>
+              <ul class="xp-list">
+                <li>
+                  ✦ Built & deployed full-stack apps using React.js, Node.js,
+                  and AWS
+                </li>
+                <li>
+                  ✦ Improved API efficiency by <strong>20%</strong> via
+                  optimized async requests
+                </li>
+                <li>
+                  ✦ Integrated RESTful APIs and contributed to responsive UI
+                  development
+                </li>
+              </ul>
+              <div class="xp-tags">
+                <span>React.js</span><span>Node.js</span><span>AWS</span
+                ><span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="xp-item">
+            <div class="xp-dot xp-dot--edu"></div>
+            <div class="xp-card card-glass">
+              <div class="xp-top">
+                <div>
+                  <h3 class="xp-role">
+                    B.Tech — Computer Science & Engineering
+                  </h3>
+                  <span class="xp-company">GIET University</span>
+                </div>
+                <span class="xp-date">2022 – 2026</span>
+              </div>
+              <div class="xp-cgpa">CGPA: <strong>8.93</strong> / 10</div>
+              <div class="cgpa-bar-wrap"><div class="cgpa-bar"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs-grid">
+          <div class="cert-card card-glass">
+            <span class="cert-icon">🏅</span>
+            <span class="cert-name"
+              >ServiceNow Certified<br />Application Developer</span
+            >
+          </div>
+          <div class="cert-card card-glass">
+            <span class="cert-icon">🏅</span>
+            <span class="cert-name"
+              >ServiceNow Certified<br />System Administrator</span
+            >
+          </div>
+          <div class="cert-card card-glass">
+            <span class="cert-icon">⭐</span>
+            <span class="cert-name">Programming in Java<br />NPTEL — 93%</span>
+          </div>
+          <div class="cert-card card-glass">
+            <span class="cert-icon">⭐</span>
+            <span class="cert-name"
+              >Joy of Computing<br />using Python — NPTEL</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <span class="section-tag">// SEND MESSAGE</span>
+          <h2 class="section-title">CONTACT</h2>
+        </div>
+        <div class="contact-wrap">
+          <div class="contact-info card-glass">
+            <p class="contact-tagline">
+              Let's build something amazing together.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:priyapanda959@gmail.com" class="contact-link">
+                <span class="contact-link-icon">✉</span>
+                <span>priyapanda959@gmail.com</span>
+              </a>
+              <a href="tel:+919692090385" class="contact-link">
+                <span class="contact-link-icon">📞</span>
+                <span>+91 9692090385</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/priyanka-panda-388b0b2b2/"
+                target="_blank"
+                class="contact-link"
+              >
+                <span class="contact-link-icon">🔗</span>
+                <span>LinkedIn Profile</span>
+              </a>
+              <a
+                href="https://github.com/PriyankaPanda09"
+                target="_blank"
+                class="contact-link"
+              >
+                <span class="contact-link-icon">⚙</span>
+                <span>GitHub Profile</span>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form card-glass" id="contact-form">
+            <div class="form-group">
+              <label>NAME</label>
+              <input type="text" placeholder="Your name..." required />
+            </div>
+            <div class="form-group">
+              <label>EMAIL</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>MESSAGE</label>
+              <textarea
+                placeholder="Let's collaborate on something awesome..."
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="send-btn">
+              ▶ SEND MESSAGE
+            </button>
+            <div id="form-success" class="form-success" style="display: none">
+              ✓ MESSAGE SENT! I'll respond soon.
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span class="footer-text"
+        >PRIYANKA PANDA © 2025 — Built with ❤ & JavaScript</span
+      >
+      <span class="footer-status">[ SYSTEM ONLINE ]</span>
+    </footer>
+
+    <!-- XP POPUP -->
+    <div class="xp-popup" id="xp-popup">+50 XP</div>
+
+    <!-- CURSOR -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
