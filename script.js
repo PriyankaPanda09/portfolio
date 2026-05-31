@@ -270,20 +270,34 @@ function initContactForm() {
   const btn = document.getElementById("send-btn");
   const success = document.getElementById("form-success");
 
-  form.addEventListener("submit", async (e) => {
+  if (!form) {
+    setTimeout(initContactForm, 500);
+    return;
+  }
+
+  btn.addEventListener("click", async (e) => {
     e.preventDefault();
     btn.textContent = "▶ SENDING...";
     btn.disabled = true;
+
+    const from_name = document.getElementById("from_name").value;
+    const from_email = document.getElementById("from_email").value;
+    const message = document.getElementById("message").value;
+
+    if (!from_name || !from_email || !message) {
+      success.style.display = "block";
+      success.textContent = "✗ Please fill all fields!";
+      success.style.color = "#ef4444";
+      btn.textContent = "▶ SEND MESSAGE";
+      btn.disabled = false;
+      return;
+    }
 
     const data = {
       service_id: "service_ayp9b89",
       template_id: "template_dgxkbxv",
       user_id: "eStI2E9JkaVAn1GhG",
-      template_params: {
-        from_name: document.getElementById("from_name").value,
-        from_email: document.getElementById("from_email").value,
-        message: document.getElementById("message").value,
-      }
+      template_params: { from_name, from_email, message }
     };
 
     try {
@@ -299,7 +313,9 @@ function initContactForm() {
         success.style.color = "var(--accent)";
         btn.textContent = "✓ SENT!";
         awardXP(100);
-        form.reset();
+        document.getElementById("from_name").value = "";
+        document.getElementById("from_email").value = "";
+        document.getElementById("message").value = "";
         setTimeout(() => {
           btn.textContent = "▶ SEND MESSAGE";
           btn.disabled = false;
