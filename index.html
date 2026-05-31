@@ -489,7 +489,7 @@
                 <span>+91 9692090385</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/priyanka-panda-388b0b2b2/"
+                href="www.linkedin.com/in/priyanka-panda-388b0b2b2"
                 target="_blank"
                 class="contact-link"
               >
@@ -506,18 +506,49 @@
               </a>
             </div>
           </div>
-          <form class="contact-form card-glass" id="contact-form">
+          <form
+            class="contact-form card-glass"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="contact-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="d311bc58-231f-4af9-82fa-a91cbd86fecc"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New message from Portfolio!"
+            />
+            <input
+              type="hidden"
+              name="from_name"
+              value="Portfolio Contact Form"
+            />
             <div class="form-group">
               <label>NAME</label>
-              <input type="text" placeholder="Your name..." required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name..."
+                required
+              />
             </div>
             <div class="form-group">
               <label>EMAIL</label>
-              <input type="email" placeholder="your@email.com" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
             </div>
             <div class="form-group">
               <label>MESSAGE</label>
               <textarea
+                name="message"
                 placeholder="Let's collaborate on something awesome..."
                 rows="4"
                 required
