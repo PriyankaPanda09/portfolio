@@ -275,33 +275,47 @@ function initContactForm() {
     btn.textContent = "▶ SENDING...";
     btn.disabled = true;
 
-    const templateParams = {
-      from_name: document.getElementById("from_name").value,
-      from_email: document.getElementById("from_email").value,
-      message: document.getElementById("message").value,
+    const data = {
+      service_id: "service_ayp9b89",
+      template_id: "template_dgxkbxv",
+      user_id: "eStI2E9JkaVAn1GhG",
+      template_params: {
+        from_name: document.getElementById("from_name").value,
+        from_email: document.getElementById("from_email").value,
+        message: document.getElementById("message").value,
+      }
     };
 
     try {
-      if (typeof emailjs === "undefined") throw new Error("EmailJS not loaded");
-      await emailjs.send("service_ayp9b89", "template_dgxkbxv", templateParams);
-      success.style.display = "block";
-      success.textContent = "✓ MESSAGE SENT! I'll respond soon.";
-      success.style.color = "var(--accent)";
-      btn.textContent = "✓ SENT!";
-      awardXP(100);
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = "▶ SEND MESSAGE";
-        btn.disabled = false;
-        success.style.display = "none";
-      }, 5000);
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        success.style.display = "block";
+        success.textContent = "✓ MESSAGE SENT! I'll respond soon.";
+        success.style.color = "var(--accent)";
+        btn.textContent = "✓ SENT!";
+        awardXP(100);
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = "▶ SEND MESSAGE";
+          btn.disabled = false;
+          success.style.display = "none";
+        }, 5000);
+      } else {
+        const errText = await response.text();
+        throw new Error(errText);
+      }
     } catch (err) {
+      console.log("Error:", err.message);
       success.style.display = "block";
-      success.textContent = "✗ Something went wrong. Email me at priyapanda959@gmail.com";
+      success.textContent = "✗ Error: " + err.message;
       success.style.color = "#ef4444";
       btn.textContent = "▶ SEND MESSAGE";
       btn.disabled = false;
-      console.log("EmailJS error:", err);
     }
   });
 }
